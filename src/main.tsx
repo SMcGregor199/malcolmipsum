@@ -8,12 +8,16 @@ import App from './App.tsx'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ConfigProvider theme={{
+      token:{
+        fontSize:16
+      },
       components:{
         Layout:{
           headerBg:"none",
           footerBg:"none"
         },
         Button: {
+          colorPrimary: "#000000",
           colorPrimaryHover: "var(--secondary-color)",   // hover text/icon color
           defaultHoverBorderColor: "var(--secondary-color)",
         }

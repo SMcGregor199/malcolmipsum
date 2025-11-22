@@ -1,17 +1,14 @@
-import {Layout, Flex} from "antd";
+import {Layout} from "antd";
 import Footer from "./components/Footer";
-const {Header,Content} = Layout;
+const {Content} = Layout;
+import SiteHeader from "./components/Header";
 
 function App() {
 
   return (
-    <Layout style={{background:"none", padding:"3rem"}}>
-      <Header>
-        <Flex vertical align="center">
-          <h1 className="roboto-slab">Malcolm X Ipsum</h1>
-        </Flex>
-      </Header>
-      <Content id="main">
+    <Layout style={{background:"none", padding:"3rem", height:"100vh"}}>
+      <SiteHeader />
+      <Content id="main" style={{flex:1}}>
 
       </Content>
       <Footer />

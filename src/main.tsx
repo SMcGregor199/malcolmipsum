@@ -17,8 +17,8 @@ createRoot(document.getElementById('root')!).render(
           footerBg:"none"
         },
         Button: {
-          colorPrimary: "#000000",
-          colorPrimaryHover: "var(--secondary-color)",   // hover text/icon color
+          colorPrimary: "var(--secondary-color)",
+          colorPrimaryHover: "#d27a32",   // hover text/icon color
           defaultHoverBorderColor: "var(--secondary-color)",
         }
       }

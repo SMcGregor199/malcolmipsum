@@ -1,19 +1,25 @@
-type Fragment = {
+let nextId : number = 1;
+
+function generateId():number{
+    return nextId++;
+}
+
+type Speech = {
     id: number;
     title: string;
     lines: Array<string>;
 };
 
-const data: Fragment[] = [
+const data: Array<Speech> = [
     {
-        id: 1,
+        id: generateId(),
         title: "Message to the Grassroots",
         lines: [
 
         ]
     },
     {
-        id: 2,
+        id: generateId(),
         title: "Speech at Ford Auditorium",
         lines: [
             "Attorney Milton Henry, distinguished guests, brothers and sisters, ladies and gentlemen, friends and enemies:",

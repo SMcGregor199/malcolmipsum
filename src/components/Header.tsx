@@ -20,7 +20,7 @@ const StyledDiv = styled.div({
 })
 export default function SiteHeader(){
     return(
-        <Header style={{height:"min-content"}}>
+        <Header style={{height:"min-content", marginBottom:"2.5rem"}}>
             <Flex vertical align="center">
                 <h1 className="roboto-slab title" style={{marginBottom:"0.5rem"}}>Malcolm X Ipsum</h1>
                 <Paragraph style={{fontSize:"1rem", marginBottom:"2.5rem", color:"#4B4F56"}}>"The future belongs to those who prepare for it today."</Paragraph>

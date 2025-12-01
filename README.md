@@ -42,5 +42,7 @@ npm run dev
 ```
 
 ## Data Sources
+All speech fragment data is currently sourced from the [BlackPast.org](https://blackpast.org/) website.
 - [Message to the Grassroots](https://blackpast.org/african-american-history/1963-malcolm-x-message-grassroots/)
 - [Speech at Ford Auditorium](https://blackpast.org/african-american-history/1965-malcolm-x-speech-ford-auditorium/)
+- [The Ballot or the Bullet](https://blackpast.org/african-american-history/1964-malcolm-x-ballot-bullet/)

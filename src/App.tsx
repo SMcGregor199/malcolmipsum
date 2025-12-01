@@ -26,7 +26,7 @@ function App() {
     }, 1000);
   }
   return (
-    <div id="container" style={{width:"800px", margin:"auto"}}>
+    <div id="container" style={{maxWidth: "800px",width: "100%",margin: "0 auto"}}>
       <Layout style={{background:"none", padding:"1rem"}}>
         <SiteHeader onGenerate={handleGenerateParagraphs}/>
         <Content id="main" style={{padding:"0 50px", marginBottom:"2.5rem", minHeight:"fit-content"}}>

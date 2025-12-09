@@ -2,6 +2,7 @@ import {Layout, Typography, Flex, Button} from "antd";
 import { useState } from "react";
 import styled from "@emotion/styled"
 import { InputNumber } from 'antd';
+import type { JSX } from 'react';
 const {Paragraph} = Typography;
 const {Header} = Layout;
 
@@ -23,21 +24,15 @@ const StyledDiv = styled.div({
     boxShadow:"0 8px 24px rgba(0, 0, 0, 0.12)",
     padding:"1.5rem"
 })
-export default function SiteHeader(props: SiteHeaderProps){
+export default function SiteHeader(props: SiteHeaderProps): JSX.Element {
     const {onGenerate} = props;
     const [inputValue, setInputValue] = useState<number>(5);
-
-    // const handleChange = (value: number | string | null) => {
-    //     if (typeof value === "number") {
-    //         setInputValue(value);  
-    //     }
-    //   };
-    const handleChange = (value: number | string | null) => {
+    const handleChange = (value: number | string | null): void => {
         if (typeof value === "number") {
             setInputValue(value);  
         }
     }
-    const handleClick = () => {
+    const handleClick = ():void => {
         if (inputValue > 0) {
             onGenerate(inputValue);
         }

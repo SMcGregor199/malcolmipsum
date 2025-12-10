@@ -84,4 +84,4 @@ const data: Array<Speech> = [
     }
 ]
 
-export default data;
+export { data, type Speech };

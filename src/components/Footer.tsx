@@ -1,7 +1,8 @@
 import { Layout, Button, Space, Typography } from "antd";  
 import { GithubOutlined, LinkedinOutlined } from "@ant-design/icons";
+import type { JSX } from "react";
 
-function Footer(){
+function Footer(): JSX.Element {
     return(
         <Layout.Footer style={{padding:0,margin:"auto", marginBottom:"2.5rem"}}>
            <Space size="large" align="center" style={{ marginBottom: 8,  display: "flex", justifyContent: "center", gap:"16px" }}>

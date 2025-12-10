@@ -1,27 +1,33 @@
 import {Layout, Typography,Button, Flex} from "antd";
 import { CopyFilled } from "@ant-design/icons";
 import {useState, useMemo} from "react";
-import Footer from "./components/Footer";
-const {Content} = Layout;
+import type {JSX} from "react";
 import SiteHeader from "./components/Header";
-const {Paragraph} = Typography;
+import Footer from "./components/Footer";
 import generateIpsum from "./utils";
+const {Content} = Layout;
+const {Paragraph} = Typography;
 
-function App() {
+
+function App(): JSX.Element {
   const [paragraphCount, setParagraphCount] = useState<number>(5);
   const [copyText, setCopyText] = useState<string>("Copy");
 
   function handleGenerateParagraphs(count:number){
       setParagraphCount(count);
   }
-  const ipsum = useMemo(() => generateIpsum(paragraphCount).map((paragraph, index) => (
+  const ipsumTextArray : string[] = useMemo(()=>{
+    return generateIpsum(paragraphCount);
+  },[paragraphCount]);
+  const ipsum: JSX.Element[] = useMemo(() => ipsumTextArray.map((paragraph:string, index:number):JSX.Element => (
     <Paragraph key={index} style={{lineHeight:"1.75rem"}}>{paragraph}</Paragraph>
-  )), [paragraphCount]);
+  )), [ipsumTextArray]);
 
-  function handleCopy(){
-    navigator.clipboard.writeText(ipsum.map((paragraph) => paragraph.props.children).join("\n\n"));
+  async function handleCopy():Promise<void>{
+    const text = ipsumTextArray.join("\n\n");
+    await navigator.clipboard.writeText(text);
     setCopyText("Copied!");
-    setTimeout(() => {
+    setTimeout((): void => {
       setCopyText("Copy");
     }, 1000);
   }

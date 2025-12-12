@@ -10,7 +10,7 @@ type Speech = {
     lines: Array<string>;
 };
 
-const data: Array<Speech> = [
+const data: Speech[] = [
     {
         id: generateId(),
         title: "Message to the Grassroots",

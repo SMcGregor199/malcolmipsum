@@ -4,7 +4,7 @@ import {useState, useMemo} from "react";
 import type {JSX} from "react";
 import SiteHeader from "./components/Header";
 import Footer from "./components/Footer";
-import generateIpsum from "./utils";
+import {generateIpsum} from "./utils";
 const {Content} = Layout;
 const {Paragraph} = Typography;
 

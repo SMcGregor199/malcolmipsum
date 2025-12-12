@@ -3,7 +3,12 @@ import shuffle  from "lodash/shuffle";
 import Chance from "chance";
 const chance = new Chance();
 
-
+function getSum(a:number,b:number):number{
+  if (typeof a !== "number" || typeof b !== "number") {
+    throw new TypeError("getSum expects numbers");
+  }
+  return a+b;
+}
 
 function generateIpsum(numParagraphs: number) : string[]{
     if(data.length === 0){
@@ -13,7 +18,7 @@ function generateIpsum(numParagraphs: number) : string[]{
 
     const maxParagraphs: number = Math.max(1, Math.min(normalized, 5));
     
-    const randomIndex: number = chance.integer({ min: 0, max: data.length - 1 })
+    const randomIndex: number = chance.integer({ min: 0, max: data.length - 1 });
     const randomSpeech: Speech = data[randomIndex];
     const shuffledLines: string[] = shuffle(randomSpeech.lines);
     const availableLines: number = shuffledLines.length;
@@ -24,4 +29,4 @@ function generateIpsum(numParagraphs: number) : string[]{
     return ipsum;
 }
 
-export default generateIpsum;
+export {generateIpsum, getSum}

@@ -7,7 +7,6 @@ A simple React + TypeScript + Vite application that generates Malcolm X Ipsum te
 
 ## Features
 - Generates Malcolm X Ipsum text based on the number of paragraphs selected by the user
-- Responsive design that works on all devices
 - Easy to use interface with clear instructions
 - No ads or pop-ups
 - No registration or sign-up required
